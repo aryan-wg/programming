@@ -1,0 +1,17 @@
+
+<main class="main m-0 p-0">
+  <ul class="flex flex-col space-y-2">
+    <li >
+      <app-user [id] = "users[0].id" [avatar] = "users[0].avatar" [name] = "users[0].name" (select)="eventHandler($event)"/> 
+    </li>
+      <app-user [id] = "users[1].id" [avatar] = "users[1].avatar" [name] = "users[1].name" (select)="eventHandler($event)"/> 
+    </li>
+      <app-user [id] = "users[2].id" [avatar] = "users[2].avatar" [name] = "users[2].name" (select)="eventHandler($event)"/> 
+    </li>
+      <app-user [id] = "users[3].id" [avatar] = "users[3].avatar" [name] = "users[3].name" (select)="eventHandler($event)"/> 
+    </li>
+  </ul>
+  <app-task [tasks] = "tasks"/>
+</main>
+
+<router-outlet />

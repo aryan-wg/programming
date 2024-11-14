@@ -1,0 +1,14 @@
+<div class="bg-purple-950 p-3 rounded-lg ">
+    @if (tasks.length != 0){
+        @for(task of tasks ; track task){
+            <app-task [task] = "task"/>
+        }
+    } @else{
+        <div class="text-white">
+            Add new task to view
+        </div>
+    }
+    <button (click)="openAddingTaskModal()" class="bg-purple-800 p-2 rounded-md ml-auto block text-purple-300 mr-0">
+        Add a task
+    </button>
+</div>
