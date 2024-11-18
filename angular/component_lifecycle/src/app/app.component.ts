@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 
-import { LifecycleComponent } from "./lifecycle/lifecycle.component";
+// import { LifecycleComponent } from "./lifecycle/lifecycle.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
-    imports: [LifecycleComponent]
+    // imports: [LifecycleComponent]
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
   lifecycleComponentIsVisible = false;
   lifecycleInputText = 'Some Random Number: ' + Math.random() * 100;
 
@@ -18,5 +18,9 @@ export class AppComponent {
 
   onChangeLifecycleInputText() {
     this.lifecycleInputText = 'Some Random Number: ' + Math.random() * 100;
+  }
+
+  ngOnDestroy(){
+    console.log("destoryeddddd")
   }
 }

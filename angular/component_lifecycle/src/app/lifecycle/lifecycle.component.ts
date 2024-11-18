@@ -15,9 +15,9 @@ import {
 @Component({
   selector: 'app-lifecycle',
   standalone: true,
-  imports: [],
+  // imports: [],
   templateUrl: './lifecycle.component.html',
-  styleUrl: './lifecycle.component.css',
+  // styleUrl: './lifecycle.component.css',
 })
 export class LifecycleComponent
   implements

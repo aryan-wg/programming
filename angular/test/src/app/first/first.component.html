@@ -1,4 +1,14 @@
 <div (click)="clickHandler()">
     <p>first component</p>
+    <ng-content/>
     <app-second/>
+    <ng-content select=".more_content"/>
+    
+    <!-- we can use ngProjectAs for marking an element for ng-content to select -->
+    <!-- <ng-content select="second"/> -->
+
+    <!-- Fallback content -->
+    <!-- <ng-content select=".more_content">
+        this is some fallback content
+    </ng-content> -->
 </div>
